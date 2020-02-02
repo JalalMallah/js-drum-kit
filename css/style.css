@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 10px;
+  background-image: url('../img/audience.jpg');
+  background-size: cover;
+  background-position: bottom;
+  --sunflower: #f1c40f;
+}
+
+body {
+  height: 100vh;
+}
+
+.keys {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .keys {
+    flex-flow: row wrap;
+    align-content: space-around;
+  }
+}
+
+.key {
+  width: 120px;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 4px solid #000;
+  border-radius: 6px;
+  text-align: center;
+  transition: all 0.1s ease-in-out;
+}
+
+@media (max-width: 500px) {
+  .key {
+    width: 100px;
+  }
+}
+
+.key > h1 {
+  font-size: 3.2rem;
+  color: #eee;
+}
+
+.key > p {
+  text-transform: uppercase;
+  color: var(--sunflower);
+  font-size: 1.4rem;
+}
+
+.playing {
+  border: 4px solid var(--sunflower);
+  box-shadow: 0 0 8px var(--sunflower);
+  transform: scale(1.1);
+}
